@@ -18,7 +18,7 @@ namespace LoginHW.Controllers
         [HttpPost]
         public ActionResult Login(LoginViewModel pageData)
         {
-            if (ModelState.IsValid)
+            if (ModelState.IsValid)//UserController用LoginViewModel
             {
                 pageData.Message = $"您使用{pageData.Account}登入成功。";
             }
