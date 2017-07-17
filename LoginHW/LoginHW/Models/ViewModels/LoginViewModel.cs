@@ -10,7 +10,7 @@ namespace LoginHW.Models.ViewModels
 {
     public class LoginViewModel
     {
-        [Required]
+        [Required]//判斷格式與黑名單
         [RegularExpression(@"\w+[@]\w+.\w+", ErrorMessage = "Email格式錯誤")]
         [BanWord("skilltree,demo,twMVC", ErrorMessage = "{0} 欄位不得輸入包含skilltree,demo,twMVC的文字 ")]
         public string Account { get; set; }

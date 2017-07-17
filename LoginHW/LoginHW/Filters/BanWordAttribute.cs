@@ -24,7 +24,7 @@ namespace LoginHW.Filters
 
             if (value is string)
             {
-                //輸入值是字串才判斷
+                //輸入值是字串才判斷黑名單字詞
                 List<string> list = new List<string>(this.Input.Split(','));
                 if (list.Any(x => value.ToString().Contains(x)))
                 {
